@@ -1,0 +1,15 @@
+.logoutButton {
+	position: fixed;
+	top: 10px;
+	right: 15px;	
+	
+	svg path {
+		fill: #666;
+	}
+
+	&:hover {
+		svg path {
+			fill: #000;
+		}
+	}
+}
