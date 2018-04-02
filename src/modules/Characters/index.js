@@ -20,16 +20,18 @@ class Characters extends Component {
     constructor(props) {
         super(props);
 
+        this.defaultPaginateState = {
+            offset: 0,
+            limit: 18,
+            total: 0,
+            count: 0,
+        };
+
         this.state = {
             isFetchingData: false,
             searchInput: '',
             selectedCharacterId: null,
-            paginate: {
-                offset: 0,
-                limit: 18,
-                total: 0,
-                count: 0,
-            }
+            paginate: { ...this.defaultPaginateState }
         };
 
         this.getCharacters = _.debounce(this.getCharacters, 500);
@@ -40,6 +42,7 @@ class Characters extends Component {
         const { actions } = this.props;
         
         this.setState({ isFetchingData: value ? true : false, searchInput: value });
+        this.setPaginateState(this.defaultPaginateState);
 
         if (!value) {
             actions.setCharacters({ characters: [] });

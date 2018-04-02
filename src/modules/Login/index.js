@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import appActions from 'actions/app';
 import { login } from 'apis';
 import routePaths from 'routePaths';
+import { isEmail } from 'utils';
 import Input from 'widgets/Input';
 import Button from 'widgets/Button';
 import styles from './index.module.scss';
@@ -38,6 +39,11 @@ class Login extends Component {
 			this.setState({ error: 'Required fields left blank.' });
 			return;
 		}
+
+        if (!isEmail(email)) {
+            this.setState({ error: 'Enter a valid email' });
+            return;
+        }
 
 		this.setState({ isSubmitting: true });
 		

@@ -8,6 +8,7 @@ import Input from 'widgets/Input';
 import Button from 'widgets/Button';
 import routePaths from 'routePaths';
 import { register } from 'apis';
+import { isEmail } from 'utils';
 import styles from 'modules/Login/index.module.scss';
 
 class Register extends Component {
@@ -38,6 +39,11 @@ class Register extends Component {
 			this.setState({ error: 'Required fields left blank.' });
 			return;
 		}
+
+        if (!isEmail(email)) {
+            this.setState({ error: 'Enter a valid email' });
+            return;
+        }
 
         this.setState({ isSubmitting: true });
         

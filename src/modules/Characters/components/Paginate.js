@@ -31,8 +31,15 @@ export default class Paginate extends Component {
 
     	const isLastPage = count < limit;
 
+        const currentPage = Math.ceil((offset+1) / limit);
+
+        const totalPages = Math.ceil(total / limit);
+
         return (
             <div className={styles.container}>
+                <p className={styles.pageInfo}>
+                    Page {currentPage} of {totalPages}
+                </p>
             	{
             		!isFirstPage ? (
             			<div onClick={this.handlePrevClick} className={styles.btn}>Prev</div>
