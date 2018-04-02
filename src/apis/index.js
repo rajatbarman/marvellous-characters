@@ -22,6 +22,6 @@ export function login({ email, password }) {
 }
 
 export function register({ email, password }) {
-  return request.post(`${AUTH_API_HOST}${AUTH_API_PREFIX}register/`)
-    .send({ email, password });
+  	return request.post(`${AUTH_API_HOST}${AUTH_API_PREFIX}register/`)
+    	.send({ email, password });
 }
