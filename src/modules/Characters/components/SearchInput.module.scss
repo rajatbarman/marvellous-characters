@@ -1,0 +1,15 @@
+.searchInput {
+	line-height: 50px;
+	position: absolute;
+	top: calc(50vh - 26px);
+	/* TODO:  Move width to sass var */
+	width: 600px;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	transition: top .3s ease-in-out;
+
+	&.lessTop {
+		top: 20px;
+	}
+}

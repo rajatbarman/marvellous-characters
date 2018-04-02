@@ -1,11 +1,16 @@
-## API documentation
-https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0
+Troubleshooting
 
-  - Relevant parameters: name, limit, offset
+  - Failed to load plugin import: Cannot find module 'eslint-plugin-import'
+
+  Run `npm install eslint-plugin-import eslint-plugin-flowtype eslint-plugin-jsx-a11y eslint-plugin-react`
 
 
-### API endpoint (with public key)
-https://gateway.marvel.com/v1/public/characters?apikey=7ebab3f9e199e73e39264cf9da3c6d5f
+Further Improvements (TODOs) - 
 
-  - You are free to use the given APIkey directly from codepen.io but if you want to use POSTman or other non-browser
-  - tools, you would have to register for your own keys (private + public) instead.
+ - Find and use webpack loader to just put the used lodash methods in js bundle and not the whole lib.
+
+ - Use sass-resources-loader
+
+ - Extract CSS into a separate file and prevent FOUC
+
+ - Scroll to top button

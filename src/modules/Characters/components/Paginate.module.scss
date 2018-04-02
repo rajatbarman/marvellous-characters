@@ -1,0 +1,17 @@
+.container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+.btn {
+	padding: 10px 20px;
+	border: 1px solid #fcfcfc;
+	cursor: pointer;
+	margin-right: 20px;
+	background: #f0f0f0;
+
+	&:hover {
+		background: #eee;
+	}
+}

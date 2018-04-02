@@ -1,0 +1,41 @@
+@import "~sass/settings/index";
+
+/* 
+	This style is reused in Register module.
+	If you change anything here Register module will also get affected.
+*/
+
+.container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 300px;
+	margin: auto;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	
+	label {
+		margin-top: 30px;
+	}
+}
+
+.button {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.error {
+	color: $red;
+	position: relative;
+	top: 15px;
+	text-align: center;
+}
+
+.link {
+	text-align: center;
+	margin-top: 20px;
+	font-weight: $semi-bold;
+}

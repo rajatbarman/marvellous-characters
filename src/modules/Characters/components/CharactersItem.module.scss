@@ -1,0 +1,22 @@
+.container {
+	width: 30%;
+	margin-left: 31px;	
+	margin-bottom: 40px;
+	cursor: pointer;
+}
+
+.imageContainer {	
+	width: 100%;
+	height: 237px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background-image: linear-gradient(90deg, #f0f0f0, #eee);
+	border-radius: 4px;
+}
+
+.characterName {
+	text-align: center;
+	margin-top: 10px;
+}

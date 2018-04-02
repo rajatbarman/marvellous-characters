@@ -1,0 +1,17 @@
+// Based on ITCSS https://cdn-images-1.medium.com/max/1000/0*BBuVTp5OqFcxMXMX.png
+
+// ========== Settings ==========
+@import "settings/index";
+
+:global {
+	// ========== Tools ==========
+	@import "tools/index";
+
+	// ========== Generic ==========
+	// Normalize
+	@import "generic/index";
+
+	// ========== Elements ==========
+	// Style html elements
+	@import "elements/index";
+}

@@ -1,0 +1,30 @@
+@import "~sass/settings/index";
+
+.label {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $gray-dark;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input {
+    border: 1px solid $gray-light;
+    border-radius: 3px;
+    padding: 0 10px;
+    line-height: 40px;
+    color: $black;
+
+    &:focus {
+        border: 1px solid $sky-blue;
+    }
+
+    &.hasError {
+        border-color: $red;
+    }
+}
+
+.error {
+    color: $red;
+}
