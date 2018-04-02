@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import cx from 'classnames';
 import { CircularLoaderIcon } from 'shared/icons';
 import styles from './CircularLoader.module.scss';

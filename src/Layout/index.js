@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { withRouter, Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import _ from 'lodash';
 import { bindActionCreators } from 'redux';
 import appActions from 'actions/app';
+import charactersActions from 'actions/characters';
 import { connect } from 'react-redux';
-import Login from 'modules/Login';
 import routePaths from 'routePaths';
-import Characters from 'modules/Characters';
 import Header from './Header';
 
 class MainLayout extends Component {
@@ -18,6 +17,7 @@ class MainLayout extends Component {
     handleLogout = () => {
         const { actions, history } = this.props;
         actions.setUser({ user: {} });
+        actions.setCharacters({ characters: [] });
         history.replace(routePaths.login);
     };
     
@@ -43,7 +43,7 @@ function mapStateToProps({ app }) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(appActions, dispatch)
+        actions: bindActionCreators({ ...appActions, ...charactersActions }, dispatch)
     };
 }
 

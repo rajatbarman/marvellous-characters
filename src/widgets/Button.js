@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import cx from 'classnames';
 import CircularLoader from 'shared/CircularLoader';
 import styles from './Button.module.scss';

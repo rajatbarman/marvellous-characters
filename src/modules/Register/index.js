@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
@@ -11,12 +10,8 @@ import routePaths from 'routePaths';
 import { register } from 'apis';
 import styles from 'modules/Login/index.module.scss';
 
-class Login extends Component {
-	static propTypes = {
-	
-	};
-
-	constructor(props) {
+class Register extends Component {
+    constructor(props) {
 		super(props);
 
 		this.state = {
@@ -98,12 +93,6 @@ class Login extends Component {
     }
 }
 
-function mapStateToProps({ doubts }) {
-    return {
-
-    };
-}
-
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(appActions, dispatch)
@@ -111,6 +100,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(
-    mapStateToProps,
+    null,
     mapDispatchToProps
-)(Login);
+)(Register);
